@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import './App.css';
 
 function App() {
 
   const [city, setCity] = useState('');
-  const [weatherForecast, setWeatherForeCast] = useState('')
+  const [weatherForecast, setWeatherForeCast] = useState('');
 
   const handleChange = (e) =>{
     setCity(e.target.value);
   }
-  const handleSearch = (e) =>{
+  const handleSearch = () =>{
     fetch(
       `http://api.weatherapi.com/v1/current.json?key=4e77fbf9672f4409ba6184750220704&q=${city}&lang=pt`
     ).then((response) => {
@@ -23,42 +24,42 @@ function App() {
   };
 
   return (
-    <div className='mt-5'>
-      <main className='container justify-content-center'>
-        <div className='jumbotron'>
-          <h1 className='text-center'>Verifique agora a previsão de tempo da sua cidade!</h1>
-          <p className="lead text-center">
-              Digite o nome da sua cidade no campo abaixo e em seguida clique em pesquisar.
-          </p>
-          <div className="row mb-4 justify-content-center">
-            <div className="col-md-6">
-              <input className="form-control" onChange={handleChange} value={city}/>
+    <div className='mt-5 main-container row'>
+     
+      {weatherForecast ? (
+          <div className='mt-5 row text-center'>
+            <div className='col'>
+              <small>
+                T: {weatherForecast.current.temp_c + "°c"}
+              </small>
             </div>
-          </div>
-
-          <div className='text-center'>
-            <button onClick={handleSearch} className="btn btn-primary btn-lg">
-                Pesquisar
-            </button>
-          </div>
-
-          {weatherForecast ? (
-          <div>
-            <div className='mt-4 d-flex'>
-              <img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
+             
+            <div className='col'>
+              <small>
+                 V: {weatherForecast.current.wind_kph + "km/h"}
+              </small>
             </div>
 
-            <div>
-              <h3>Hoje o dia está: {weatherForecast.current.condition.text}</h3>
-              <p>
-                Temperatura está {weatherForecast.current.temp_c}
-              </p>
+            <div className='col'>
+              <small>
+                U: {weatherForecast.current.humidity + '%'}
+              </small>
             </div>
-      
-          </div>
+            </div>
+
             ) : null}
-        </div>
-      </main>
+
+      {weatherForecast ? (<img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
+) : null}
+
+      <div className="input-group mb-3">
+              <input type="text" className="form-control" onChange={handleChange} placeholder="Insira sua cidade aqui" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+              <div className="input-group-append">
+                <button onClick={handleSearch} className=" bg-success text-white" type="button">Encontrar</button>
+              </div>
+            </div>
+
+
     </div>
   );
 }
