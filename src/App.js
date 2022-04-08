@@ -5,6 +5,7 @@ function App() {
 
   const [city, setCity] = useState('');
   const [weatherForecast, setWeatherForeCast] = useState('');
+  const [background, setBackground] = useState('mt-5 main-container row background')
 
   const handleChange = (e) =>{
     setCity(e.target.value);
@@ -19,12 +20,20 @@ function App() {
     })
     .then((data) => {
       setWeatherForeCast(data);
-      console.log('data ===>', data)
+      console.log('data ===>', data);
+      if(data.current.temp_c > 20){
+      setBackground('mt-5 main-container row yellow')
+      } else if(data.current.temp_c < 20) {
+        setBackground('mt-5 main-container row background blue')
+      } else if(){
+        
+      }
     });
   };
 
+
   return (
-    <div className='mt-5 main-container row'>
+    <div className={background}>
      
       {weatherForecast ? (
           <div className='mt-5 row text-center'>
@@ -46,7 +55,7 @@ function App() {
               </small>
             </div>
             </div>
-
+          
             ) : null}
 
       {weatherForecast ? (<img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
@@ -58,8 +67,6 @@ function App() {
                 <button onClick={handleSearch} className=" bg-success text-white" type="button">Encontrar</button>
               </div>
             </div>
-
-
     </div>
   );
 }

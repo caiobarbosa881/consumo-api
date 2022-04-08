@@ -5,8 +5,11 @@
     margin: auto;
     border-radius: 10px;
 }
-.yellow-climate{
+.yellow{
     background-color: rgb(245, 245, 33);
+}
+.blue{
+    
 }
 .form-control{
     height: 40px;
