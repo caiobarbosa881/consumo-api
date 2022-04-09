@@ -9,7 +9,7 @@
     background-color: rgb(245, 245, 33);
 }
 .blue{
-    
+    background-color: aqua;
 }
 .form-control{
     height: 40px;
@@ -20,7 +20,4 @@ button{
     border-style: solid;
     height: 40px;
     width: 170px;
-}
-button:hover{
-    
 }

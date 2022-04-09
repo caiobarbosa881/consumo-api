@@ -22,19 +22,15 @@ function App() {
       setWeatherForeCast(data);
       console.log('data ===>', data);
       if(data.current.temp_c > 20){
-      setBackground('mt-5 main-container row yellow')
-      } else if(data.current.temp_c < 20) {
-        setBackground('mt-5 main-container row background blue')
-      } else if(){
-        
-      }
+      setBackground('mt-5 main-container row yellow');
+      } else{
+        setBackground('mt-5 main-container row background blue');
+      } 
     });
   };
 
-
   return (
     <div className={background}>
-     
       {weatherForecast ? (
           <div className='mt-5 row text-center'>
             <div className='col'>
@@ -55,7 +51,6 @@ function App() {
               </small>
             </div>
             </div>
-          
             ) : null}
 
       {weatherForecast ? (<img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
