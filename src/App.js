@@ -34,24 +34,27 @@ function App() {
       {weatherForecast ? (
           <div className='mt-5 row text-center'>
             <div className='col'>
+              <img src={require('./assets/images/temperaturec.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
               <small>
-                T: {weatherForecast.current.temp_c + "°c"}
+                {weatherForecast.current.temp_c + "°c"}
               </small>
             </div>
              
             <div className='col'>
-              <small>
-                 V: {weatherForecast.current.wind_kph + "km/h"}
-              </small>
+              <img src={require('./assets/images/wind.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
+                <small>
+                  {weatherForecast.current.wind_kph + "km/h"}
+                </small>
             </div>
 
             <div className='col'>
+            <img src={require('./assets/images/water.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
               <small>
-                U: {weatherForecast.current.humidity + '%'}
+                {weatherForecast.current.humidity + '%'}
               </small>
             </div>
             </div>
-            ) : null}
+            ) : <div className='empty-space'></div>}
 
       {weatherForecast ? (<img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
 ) : null}
