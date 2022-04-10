@@ -59,6 +59,7 @@ function App() {
       {weatherForecast ? (<img src={weatherForecast.current.condition.icon} alt='ícone que representa o clima atual da aplicação'/>
 ) : null}
 
+
       <div className="input-group mb-3">
               <input type="text" className="form-control" onChange={handleChange} placeholder="Insira sua cidade aqui" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
               <div className="input-group-append">
