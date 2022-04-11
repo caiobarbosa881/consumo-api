@@ -35,48 +35,49 @@ function App() {
           <div className='main-container-active'>
 
             <div className='temperature-box mt-3'>
-            <div className='condition-container'>
-            <img src={require('./assets/images/temperaturec.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
-              <small>
+    
+            <p>{weatherForecast.location.region}</p>
+              <small className='temp-text '>
                 {weatherForecast.current.temp_c + "°c"}
               </small>
-              <img src={weatherForecast.current.condition.icon} className='weather-condition' alt='ícone que representa o clima atual da aplicação'/>
-            </div>
+              <img src={weatherForecast.current.condition.icon} className='weather-condition mb-4' alt='ícone que representa o clima atual da aplicação'/>
+            <p>{weatherForecast.current.condition.text}</p>        
 
             </div>
           
             <div className='icons-container mt-3'>
-            <div className=''>
-              <img src={require('./assets/images/temperaturec.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
-              <small>
-                {weatherForecast.current.temp_c + "°c"}
-              </small>
-            </div>
-             
-            <div className=''>
-              <img src={require('./assets/images/wind.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
-                <small>
-                  {weatherForecast.current.wind_kph + "km/h"}
-                </small>
-            </div>
 
-            <div className=''>
-            <img src={require('./assets/images/water.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
-              <small>
-                {weatherForecast.current.humidity + '%'}
-              </small>
-            </div>
+              <div className='current-icons'>
+                <img src={require('./assets/images/temperaturec.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
+               
+                  {weatherForecast.current.temp_c + "°c"}
+               
+              </div>
+              
+              <div className='current-icons'>
+                <img src={require('./assets/images/wind.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
+                
+                    {weatherForecast.current.wind_kph + "km/h"}
+                 
+              </div>
+
+              <div className='current-icons'>
+              <img src={require('./assets/images/water.png')} className='weather-icons' alt='imagem que representa o vento se movimentando'/>
+              
+                  {weatherForecast.current.humidity + '%'}
+               
+              </div>
+
             </div>
 
           </div>
             ) : <div className='empty-space'></div>}
 
 
-      <div className='search-container row justify-content-center'>
-              <input type="text" className=" weather-input mt-4" onChange={handleChange} placeholder="Insira sua cidade aqui"/>
+      <div className='search-container'>
+              <input type="text" className="weather-input" onChange={handleChange} placeholder="Insira sua cidade aqui"/>
               <button onClick={handleSearch} className="bg-success text-white search-button" type="button">Buscar</button>
       </div>
-
     </div>
   );
 }
