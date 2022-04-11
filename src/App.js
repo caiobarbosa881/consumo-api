@@ -75,8 +75,8 @@ function App() {
 
 
       <div className='search-container'>
-              <input type="text" className="weather-input" onChange={handleChange} placeholder="Insira sua cidade aqui"/>
-              <button onClick={handleSearch} className="bg-success text-white search-button" type="button">Buscar</button>
+              <input type="text" className="weather-input d-block mt-4" onChange={handleChange} placeholder="Insira sua cidade aqui"/>
+              <button onClick={handleSearch} className="bg-success text-white search-button d-block mt-3" type="button">Buscar</button>
       </div>
     </div>
   );
