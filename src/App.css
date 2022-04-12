@@ -19,7 +19,6 @@
     top:47px;
     width: 420px;
     transform-origin: 0% 100%;
-
 }
 .active-out{
     animation-name: showWeather;
@@ -48,7 +47,7 @@
     color: rgb(255, 255, 255);
     font-weight:500;
     border-radius: 20px;
-    background-color: rgb(36, 36, 62);
+    background-color: #5182e8;
     text-align: center;
     margin: auto;
     height: 250px;
@@ -59,7 +58,7 @@
     margin: 0px;
 }
 .temp-text{
-    font-size: 90px;
+    font-size: 80px;
     color: #F2F2F2;
 }
 .main-container-active{
@@ -71,7 +70,7 @@
     padding: 0;
 }
 .icons-container{
-    background-color: #31425C;
+    background-color: #5182e8;
     height: 95.5px;
     margin: auto;
     border-radius: 15px;
@@ -86,10 +85,10 @@
     color: #F2F2F2;
 }
 .yellow{
-    background: -webkit-linear-gradient(180deg, rgb(245, 245, 33), rgb(194, 65, 6));
+    background-color: #ffcc00;
 }
 .blue{
-    background: -webkit-linear-gradient(180deg, rgb(101, 172, 252), rgb(2, 90, 255));
+    background-color: #5182e8;
 }
 .weather-icons{
     height: 30px;
@@ -106,31 +105,56 @@
     border-radius: 10px;
     background-color: #F2F2F2;
     height: 50px;
-    width: 350px;
+    width: 230px;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
     border: none;
-    outline: #CEE851 5px auto;
+    outline: white 5px auto;
+
 }
 .search-container{
     position: absolute;
-    background-color:#51E8B7;
+    background-color:#6B51E8;
     height: 162.5px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 420px;
     top: 447px;
-    padding-top: 15px;
+    padding-top: 5px;
 }
 .search-button{
-    outline: #CEE851 5px auto;
+    outline: #5182e8 5px auto;
 	border: none;
-
-    background-color: #CEE851;
+    background-color: #5182e8;
     border-radius: 50px;
     border-style: solid;
     height: 50px;
     width: 250px;
     margin: auto;
 }
+#button {
+    margin: auto;
+    outline:none;
+    height: 55px;
+    text-align: center;
+    width: 140px;
+    border-radius:40px;
+    background: #fff;
+    border: 2px solid #5182e8;
+    color: #5182e8;
+    letter-spacing:1px;
+    text-shadow:0;
+    font-size:16px;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+#button:hover {
+      color:white;
+      background: #5182e8;
+    }
+#button:active {
+      letter-spacing: 2px;
+      letter-spacing: 2px;
+    }
