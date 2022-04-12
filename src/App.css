@@ -85,10 +85,10 @@
     color: #F2F2F2;
 }
 .yellow{
-    background-color: #ffcc00;
+    background-image: linear-gradient(to bottom, #fdd01d 10%, #cee851);
 }
 .blue{
-    background-color: #5182e8;
+    background-color: rgba(95, 223, 255, 0.8);
 }
 .weather-icons{
     height: 30px;
