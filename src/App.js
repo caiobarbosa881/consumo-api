@@ -36,7 +36,6 @@ function App() {
     })
     .then((data) => {
       setWeatherForeCast(data);
-     
       console.log('data ===>', data);
       if(data.current.temp_c > 20){
       setBackground('mt-5 main-container row yellow');
@@ -64,8 +63,8 @@ function App() {
             <div className={iconContainer}>
 
               <div className='current-icons'>
-                <img src={require('./assets/images/temperaturec.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
-                {weatherForecast.current.temp_c + "°c"}
+                <img src={require('./assets/images/uv.png')} className='weather-icons' alt='Medidor de temperatura em graus mais conhecido como Termômetro'/>
+                {weatherForecast.current.uv}
               </div>
               
               <div className='current-icons'>

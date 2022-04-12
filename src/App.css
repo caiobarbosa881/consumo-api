@@ -93,6 +93,7 @@
 }
 .weather-icons{
     height: 30px;
+    margin-right: 8px;
 }
 .col{
     margin-top: auto;
