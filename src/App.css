@@ -1,5 +1,5 @@
 .main-container{
-    background-color: rgba(95, 223, 255, 0.8);
+    background-color:#6B51E8;
     height: 561px;
     width: 420px;
     margin: auto;
@@ -19,6 +19,22 @@
     top:47px;
     width: 420px;
     transform-origin: 0% 100%;
+}
+.error-container{
+   text-align: center;
+   color: white;
+   font-style: italic;
+   height: 390px;
+   width: 420px;
+}
+.error404{
+    height: 300px;
+    width: 380px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-image: cover;
+    background-position: center;
+    background-image: url(./assets/images/404.svg);
 }
 .active-out{
     animation-name: showWeather;

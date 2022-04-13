@@ -5,7 +5,6 @@ function App() {
 
   const [city, setCity] = useState('');
   const [weatherForecast, setWeatherForeCast] = useState('');
-  const [background, setBackground] = useState('mt-5 main-container');
   const [initialSpace, setInitialSpace] = useState('initial-space');
   const [temperatureBox, setTemperature] = useState('temperature-box mt-3');
   const [iconContainer, setIconContainer] = useState('icons-container mt-3')
@@ -37,16 +36,11 @@ function App() {
       .then((data) => {
         setWeatherForeCast(data);
         console.log('data ===>', data);
-        if (data.current.temp_c > 20) {
-          setBackground('mt-5 main-container row yellow');
-        } else {
-          setBackground('mt-5 main-container row blue');
-        }
       });
   };
 
   return (
-    <div className={background}>
+    <div className='mt-5 main-container row'>
       <div className={initialSpace}></div>
       {weatherForecast ? (
         <div className='main-container-active'>
@@ -80,11 +74,12 @@ function App() {
           </div>
 
         </div>
-      ) : null}
+      ) : <div className='error-container mt-4'><h1>ERROR 404</h1><div className='error404'></div></div> }
 
       <div className='search-container'>
-        <input type="text" className="weather-input d-block mt-4" onChange={handleChange} placeholder="Insira sua cidade aqui" />
+        <input type="text" className="weather-input d-block mt-3" onChange={handleChange} placeholder="Insira sua cidade aqui" />
         <button onClick={handleSearch} className="d-block mt-3" id="button" type='button'>BUSCAR</button>
+
       </div>
       
     </div>
