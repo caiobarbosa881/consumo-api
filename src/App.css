@@ -26,6 +26,11 @@
    font-style: italic;
    height: 390px;
    width: 420px;
+   animation-name: boxOut;
+   animation-duration: 0.4s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
 }
 .error404{
     height: 300px;
@@ -50,6 +55,20 @@
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
+.boxIn{
+    animation-name: boxIn;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.fadeIn{
+    animation-name: fadeInOpacity;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
 @keyframes showWeather {
     0% {width: 420px}
     80%{width: 50px;}
@@ -58,6 +77,18 @@
 @keyframes boxOut {
     0% {transform: scaleX(0);}
     100%{transform: scaleX(1);}
+}
+@keyframes boxIn {
+    0% {transform: scaleX(1);}
+    100%{transform: scaleX(0);}
+}
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .temperature-box{
     color: rgb(255, 255, 255);

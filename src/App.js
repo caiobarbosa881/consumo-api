@@ -8,8 +8,7 @@ function App() {
   const [initialSpace, setInitialSpace] = useState('initial-space');
   const [temperatureBox, setTemperature] = useState('temperature-box mt-3');
   const [iconContainer, setIconContainer] = useState('icons-container mt-3')
-
-
+  
   const handleChange = (e) => {
     setCity(e.target.value);
   }
@@ -19,7 +18,7 @@ function App() {
     setTemperature('temperature-box mt-3 boxOut');
     setTimeout(() => {
       setTemperature('temperature-box mt-3');
-      setIconContainer('icons-container mt-3')
+      setIconContainer('icons-container mt-3');
     }, 1000);
 
     setIconContainer('icons-container mt-3 boxOut');
@@ -83,7 +82,6 @@ function App() {
       </div>
       
     </div>
-
 
   );
 }
