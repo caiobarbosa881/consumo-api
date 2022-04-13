@@ -23,6 +23,7 @@
 .error-container{
    text-align: center;
    color: white;
+   font-weight: 600;
    font-style: italic;
    height: 390px;
    width: 420px;
@@ -91,10 +92,10 @@
 	}
 }
 .temperature-box{
-    color: rgb(255, 255, 255);
+    color: #5182e8;
     font-weight:500;
     border-radius: 20px;
-    background-color: #5182e8;
+    background-color: white;
     text-align: center;
     margin: auto;
     height: 250px;
@@ -106,7 +107,7 @@
 }
 .temp-text{
     font-size: 80px;
-    color: #F2F2F2;
+    color: #5182e8;
 }
 .main-container-active{
     border-top-left-radius: 15px;
@@ -117,7 +118,7 @@
     padding: 0;
 }
 .icons-container{
-    background-color: #5182e8;
+    background-color: rgb(255, 255, 255);
     height: 95.5px;
     margin: auto;
     border-radius: 15px;
@@ -129,7 +130,8 @@
 .current-icons{
     display: inline-block;
     margin-right: 20px;
-    color: #F2F2F2;
+    color: #5182e8;
+    font-weight: 700;
 }
 .yellow{
     background-image: linear-gradient(to bottom, #fdd01d 10%, #cee851);

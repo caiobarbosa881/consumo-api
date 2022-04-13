@@ -7,7 +7,7 @@ function App() {
   const [weatherForecast, setWeatherForeCast] = useState('');
   const [initialSpace, setInitialSpace] = useState('initial-space');
   const [temperatureBox, setTemperature] = useState('temperature-box mt-3');
-  const [iconContainer, setIconContainer] = useState('icons-container mt-3')
+  const [iconContainer, setIconContainer] = useState('icons-container mt-3');
   
   const handleChange = (e) => {
     setCity(e.target.value);
@@ -73,7 +73,7 @@ function App() {
           </div>
 
         </div>
-      ) : <div className='error-container mt-4'><h1>ERROR 404</h1><div className='error404'></div></div> }
+      ) : <div className='error-container mt-3'><h1>ERROR 404</h1><p>nenhum dado encontrado relacionado a sua busca, tente outro local.</p><div className='error404'></div></div> }
 
       <div className='search-container'>
         <input type="text" className="weather-input d-block mt-3" onChange={handleChange} placeholder="Insira sua cidade aqui" />
