@@ -22,6 +22,7 @@ function App() {
     }, 1000);
 
     setIconContainer('icons-container mt-3 boxOut');
+
     fetch(
       `http://api.weatherapi.com/v1/current.json?key=4e77fbf9672f4409ba6184750220704&q=${city}&lang=pt`
     ).then((response) => {
@@ -29,13 +30,13 @@ function App() {
         return response.json()
       }
       if (response.status === 400) {
-        return console.log('esse valor não foi encontrado');
+        return console.log('O valor inserido no campo não foi encontrado');
       }
     })
       .then((data) => {
         setWeatherForeCast(data);
-        console.log('data ===>', data);
-      });
+      }).catch(error =>(console.log(error)))
+      
   };
 
   return (
@@ -73,7 +74,7 @@ function App() {
           </div>
 
         </div>
-      ) : <div className='error-container mt-3'><h1>ERROR 404</h1><p>nenhum dado encontrado relacionado a sua busca, tente outro local.</p><div className='error404'></div></div> }
+      ) : <div className='error-container mt-3'><h1>ERROR</h1><p>nenhum dado encontrado relacionado a sua busca, tente outro local.</p><div className='error404'></div></div> }
 
       <div className='search-container'>
         <input type="text" className="weather-input d-block mt-3" onChange={handleChange} placeholder="Insira sua cidade aqui" />

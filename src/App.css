@@ -102,6 +102,9 @@
     width: 300px;
     padding-top: 30px;
 }
+.temperature-box:hover{
+    background-color: #f6f6f6;
+}
 .temperature-box p{
     margin: 0px;
 }
@@ -119,13 +122,16 @@
 }
 .icons-container{
     background-color: rgb(255, 255, 255);
-    height: 95.5px;
+    height: 90.5px;
     margin: auto;
     border-radius: 15px;
     width: 400px;
     padding-right: 0px;
     padding-left: 75px;
     padding-top: 30px;
+}
+.icons-container:hover{
+    background-color: #e7e7e7;
 }
 .current-icons{
     display: inline-block;
