@@ -1,26 +1,20 @@
 # consumo api
 
 <img alt="image of the page" src="https://user-images.githubusercontent.com/54036407/163600297-72c128b3-5e0a-4fa1-bb27-b45cc0d2461c.gif"/>
-# About the Project
-working in this part
+
+## About the Project
+You can consult the weather information of places seaching by name.
 
 ### Features and Future Improvements
 
-working in this part
-
-
-- [] Responsive Design
-- [] Acessibility
-- [] Animations
-- [] User Experience
+- [X] API restful
+- [X] Error Handling(status 400)
+- [X] Animations
 
 ## 💻 Dependencies
 
 <ul>
-  <li></li>
-  <li></li>
-  <li> </li>
-  <li> </li>
+  <li>Standard React Dependencies</li>
 </ul>
 
 ## 🚀 Running the Project
